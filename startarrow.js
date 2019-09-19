@@ -22,7 +22,7 @@ function start(config) {
             
             while (counter > 0) {
                 robot.keyTap(isUp);
-                sleep.msleep(1000);
+                sleep.msleep(100);
                 counter --;
             }
             sleep.sleep(getRandomInt(config.maxArrowInterval));

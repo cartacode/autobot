@@ -18,22 +18,21 @@ function start(config) {
             let tabCount = getRandomInt(config.maxTabCount)
             let counter = tabCount;
             let isShift = true;
-            if (getRandomInt(2) == 1)
-                isShift = false;
+            // if (getRandomInt(2) == 1)
+            //     isShift = false;
             
 
             while (counter > 0) {
-
+                let keys = ['control'];
                 if (isShift) 
-                    robot.keyToggle("shift", "down");
-                robot.keyToggle("control", "down");
-                robot.keyTap("tab");
+                    keys.push('shift');
 
-                robot.keyToggle("control", "up");		
-                if (isShift) 
-                    robot.keyToggle("shift", "up");
+                robot.keyTap("tab", keys);
 
-                sleep.msleep(500);
+                robot.keyToggle("control", "up");
+                robot.keyToggle("shift", "up");
+
+                sleep.msleep(100);
                 counter --;
             }
             sleep.sleep(getRandomInt(config.maxTabInterval));

@@ -1,11 +1,11 @@
 
 module.exports = { 
 	maxTabInterval: 20, //In seconds
-	maxTabCount: 4,
-	maxArrowInterval: 5, //In seconds
-	maxArrowCount: 50,
-	maxMouseInterval: 10, //In seconds
-	maxMouseCount: 30,
+	maxTabCount: 10,
+	maxArrowInterval: 30, //In seconds
+	maxArrowCount: 40,
+	maxMouseInterval: 60, //In seconds
+	maxMouseCount: 20,
 	maxMouseMoveDelta: 200  //In pixel
 }
 

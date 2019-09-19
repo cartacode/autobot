@@ -20,8 +20,10 @@ function start(config) {
             let counter = mouseCount;
 
             while (counter > 0) {
-                robot.mouseToggle('down');
-                robot.mouseToggle('up');
+                if ( counter == mouseCount || counter == 1) {
+                    robot.mouseToggle('down');
+                    robot.mouseToggle('up');
+                }
 
                 let delta = (getRandomInt(config.maxMouseMoveDelta) - (config.maxMouseMoveDelta/2));
                 robot.moveMouse(mouse.x, mouse.y + delta);
